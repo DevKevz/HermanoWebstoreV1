@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hermano - Clothing Line</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+  <div id="splash-screen">
+    <img src="logo.jpg" alt="Hermano Logo" id="splash-logo">
+  </div>
+  <!-- Header -->
+  <header>
+    <div class="logo">HERMANO</div>
+    <nav>
+      <ul>
+        <li><a href="#home" class="nav-link">Home</a></li>
+        <li><a href="#store" class="nav-link">Store</a></li>
+        <li><a href="#our-story" class="nav-link">Our Story</a></li>
+      </ul>
+    </nav>
+    <div class="utility-buttons">
+      <input type="text" id="search-bar" placeholder="Search products...">
+      <button class="icon-btn" id="profile-btn"><i class="fas fa-user"></i></button>
+      <button class="icon-btn" id="cart-btn"><i class="fas fa-shopping-cart"></i><span class="cart-count">0</span></button>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <!-- Home Section -->
+    <section id="home" class="section">
+      <div class="hero">
+        <h1>Welcome to Hermano</h1>
+        <p>U N B O U N D   &nbsp&nbsp&nbsp&nbspP O S S I B I L I T I E S</p>
+        <div class="video-container">
+          <video autoplay loop muted>
+            <source src="sample-trailer.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+          <video autoplay loop muted>
+            <source src="sample-trailer2.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+        <p class="video-description">Explore our latest collection inspired by urban minimalism.</p>
+      </div>
+    </section>
+
+    <!-- Store Section -->
+    <section id="store" class="section">
+      <h2>Store</h2>
+      <div class="product-grid">
+        <!-- Product Cards -->
+        <div class="product-card" data-name="Product 1" data-sizes="S, M, L">
+          <img src="product1.jpg" alt="Product 1">
+          <h3>Evergreen | Our Boxy Crop tee</h3>
+          <p>₱50.00</p>
+          <button class="add-to-cart">Add to Cart</button>
+        </div>
+        <!-- Add more product cards here -->
+        <div class="product-card" data-name="Product 2" data-sizes="S, M, L">
+          <img src="product1.jpg" alt="Product 2">
+          <h3>Evergreen | Our Boxy Crop tee</h3>
+          <p>₱50.00</p>
+          <button class="add-to-cart">Add to Cart</button>
+        </div>
+        <div class="product-card" data-name="Product 3" data-sizes="S, M, L">
+          <img src="product1.jpg" alt="Product 3">
+          <h3>Evergreen | Our Boxy Crop tee</h3>
+          <p>₱50.00</p>
+          <button class="add-to-cart">Add to Cart</button>
+        </div>
+        <div class="product-card" data-name="Product 4" data-sizes="S, M, L">
+          <img src="product1.jpg" alt="Product 4">
+          <h3>Evergreen | Our Boxy Crop tee</h3>
+          <p>₱50.00</p>
+          <button class="add-to-cart">Add to Cart</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Our Story Section -->
+    <section id="our-story" class="section">
+      <center><h2>Our Story</h2></center>
+      <div class="story-content">
+        <img src="story-image.jpg" alt="Our Story">
+        <div class="story-text">
+          <h3>Origin</h3>
+          <p>Hermano was founded in 2023 with a vision to redefine minimalist fashion.</p>
+          <h3>Vision</h3>
+          <p>To create timeless, high-quality clothing that inspires confidence.</p>
+          <h3>Mission</h3>
+          <p>To deliver sustainable and stylish apparel for the modern individual.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <section class="newsletter">
+    <h2>Subscribe to Our Newsletter</h2>
+    <p>Get the latest updates on new collections and exclusive offers.</p>
+    <form id="newsletter-form">
+      <input type="email" placeholder="Enter your email" required>
+      <button type="submit" class="btn">Subscribe</button>
+    </form>
+  </section>
+
+  <footer>
+    <div class="footer-logo">HERMANO</div>
+    <div class="social-media">
+      <a href="https://www.facebook.com/hrmno.ph" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+      <a href="https://www.instagram.com/hrmno.ph?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" class="social-icon"><i class="fab fa-instagram"></i></a>
+      <a href="#" class="social-icon"><i class="fab fa-tiktok"></i></a>
+    </div>
+  
+  </footer>
+
+  <div id="product-modal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2 id="modal-product-name"></h2>
+      <img id="modal-product-image" src="" alt="">
+      <p id="modal-product-price"></p>
+      <p id="modal-product-sizes"></p>
+      <button class="add-to-cart">Add to Cart</button>
+    </div>
+  </div>
+
+  <div id="profile-modal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>Profile</h2>
+      <form id="profile-form">
+        <input type="text" placeholder="Full Name" required>
+        <input type="email" placeholder="Email" required>
+        <input type="text" placeholder="Address" required>
+        <input type="tel" placeholder="Phone Number" required>
+        <input type="date" placeholder="Birthday" required>
+        <button type="submit">Save Changes</button>
+      </form>
+    </div>
+  </div>
+
+  <div id="cart-modal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>Your Cart</h2>
+      <div id="cart-items"></div>
+      <button id="checkout-btn">Proceed to Checkout</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
